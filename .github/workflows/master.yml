@@ -13,14 +13,17 @@ jobs:
         docker: [20.10.21]
 
     steps:
+    
     - name: install docker
       run: 
           curl -fsSL https://get.docker.com -o get-docker.sh
           sh get-docker.sh
     - name: build the docker image
     - uses: docker/build-action@v2
+    
     - name: Set up docker${{ matrix.docker-version }}
     - uses: actions/setup-docker@v3
+    
       with:
         docker-version: ${{ matrix.docker-version }}
         
