@@ -14,9 +14,8 @@ jobs:
 
     steps:
     - name: install docker
-    - uses: docker/install-action@v1
-       with:
-        curl -fsSL https://get.docker.com -o get-docker.sh
+      run: 
+          curl -fsSL https://get.docker.com -o get-docker.sh
           sh get-docker.sh
     - name: build the docker image
     - uses: docker/build-action@v2
