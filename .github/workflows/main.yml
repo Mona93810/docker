@@ -26,5 +26,5 @@ jobs:
          
     - name: build the container 
       run: |
-          docker run --name yout -p 80:80b -d -it myapp2 
+          docker run --name yout -p 80:80 -d -it myapp2 
        
